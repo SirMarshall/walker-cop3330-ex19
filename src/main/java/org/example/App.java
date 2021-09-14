@@ -4,6 +4,7 @@
  */
 
 package org.example;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App 
@@ -16,11 +17,13 @@ public class App
         double bmi;
 
         //Query for height and weight
+        System.out.println("Note: If you do not enter the information correctly, you will not be allowed to continue.");
         System.out.println("Please enter your height in inches:");
         height = input.nextInt();
 
         System.out.println("Please enter your weight in pounds:");
         weight = input.nextInt();
+
 
         //Calculation
         bmi = (weight / (height * height)) * 703;
